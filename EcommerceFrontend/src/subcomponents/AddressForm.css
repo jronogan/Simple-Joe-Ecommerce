@@ -1,0 +1,27 @@
+.address-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.address-form-input {
+  width: 100%;
+  padding: 16px 20px;
+  background-color: #c8daea;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #4a5e74;
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.address-form-input::placeholder {
+  color: #7a90a4;
+}
+
+.address-form-input:focus {
+  background-color: #b8d0e4;
+}

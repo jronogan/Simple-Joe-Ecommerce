@@ -1,0 +1,249 @@
+.profile-page {
+  min-height: 100vh;
+  background-color: #3d4f63;
+}
+
+/* SEARCH SECTION */
+.profile-search-section {
+  background-color: #3d4f63;
+  padding: 32px 60px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-search-wrapper {
+  flex: 1;
+  display: flex;
+  background-color: #dde9f5;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.profile-search-input {
+  flex: 1;
+  padding: 16px 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: #4a5e74;
+  outline: none;
+  cursor: default;
+}
+
+.profile-search-input::placeholder {
+  color: #7a90a4;
+}
+
+.profile-search-btn {
+  padding: 0 24px;
+  background-color: #6b8099;
+  color: #fff;
+  border: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.profile-category-select {
+  padding: 14px 24px;
+  background-color: transparent;
+  border: 1.5px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  min-width: 150px;
+  text-align: center;
+}
+
+.profile-category-select option {
+  background-color: #3d4f63;
+  color: #fff;
+}
+
+/* CONTENT */
+.profile-content {
+  padding: 32px 60px 60px;
+}
+
+.profile-welcome {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 28px;
+}
+
+.profile-panels {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* LEFT PANEL */
+.profile-left-panel {
+  width: 280px;
+  flex-shrink: 0;
+  background-color: #dde9f5;
+  border-radius: 12px;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-height: 420px;
+}
+
+.profile-account-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #4a5e74;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.profile-nav-link {
+  font-size: 20px;
+  font-weight: 400;
+  color: #7a90a4;
+  text-decoration: none;
+  text-align: center;
+}
+
+.profile-nav-link:hover {
+  color: #4a5e74;
+}
+
+.profile-nav-logout {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: inherit;
+  color: #7a90a4;
+  text-align: center;
+  cursor: pointer;
+}
+
+.profile-nav-logout:hover {
+  color: #4a5e74;
+}
+
+/* RIGHT PANEL */
+.profile-right-panel {
+  flex: 1;
+  background-color: #dde9f5;
+  border-radius: 12px;
+  padding: 40px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-field-label {
+  font-size: 22px;
+  font-weight: 400;
+  color: #7a90a4;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.profile-field-value {
+  font-size: 15px;
+  color: #4a5e74;
+  display: block;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.profile-btn {
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.profile-btn-filled {
+  background-color: #4a5e74;
+  color: #fff;
+  border: none;
+}
+
+.profile-btn-filled:hover {
+  background-color: #3d4f63;
+}
+
+.profile-btn-outline {
+  background-color: transparent;
+  color: #4a5e74;
+  border: 1.5px solid #4a5e74;
+}
+
+.profile-btn-outline:hover {
+  background-color: #c8daea;
+}
+
+/* FORM INPUTS (edit profile / add address) */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.profile-input {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #c8daea;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #4a5e74;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.profile-input::placeholder {
+  color: #7a90a4;
+}
+
+.profile-input:focus {
+  background-color: #b8d0e4;
+}
+
+.profile-form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.profile-error {
+  color: #e53e3e;
+  font-size: 13px;
+}
+
+/* ADDRESS CARDS */
+.profile-address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

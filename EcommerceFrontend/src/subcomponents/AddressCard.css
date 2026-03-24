@@ -1,0 +1,117 @@
+.address-card {
+  background-color: #6b8099;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.address-card-field {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.address-card-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  justify-content: center;
+}
+
+.address-card-btn {
+  padding: 8px 28px;
+  background-color: transparent;
+  border: 1.5px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.address-card-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.address-card-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* EDIT MODAL */
+.address-edit-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.address-edit-modal {
+  background-color: #dde9f5;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.address-edit-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4a5e74;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.address-edit-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.address-edit-btn {
+  flex: 1;
+  padding: 14px 0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.address-edit-btn-filled {
+  background-color: #4a5e74;
+  color: #fff;
+  border: none;
+}
+
+.address-edit-btn-filled:hover:not(:disabled) {
+  background-color: #3d4f63;
+}
+
+.address-edit-btn-filled:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.address-edit-btn-outline {
+  background-color: transparent;
+  color: #4a5e74;
+  border: 1.5px solid #4a5e74;
+}
+
+.address-edit-btn-outline:hover {
+  background-color: #c8daea;
+}

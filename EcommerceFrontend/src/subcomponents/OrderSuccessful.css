@@ -1,0 +1,141 @@
+.order-success-page {
+  min-height: 100vh;
+  background-color: #5c7591;
+}
+
+.order-success-content {
+  padding: 48px 60px;
+}
+
+.order-success-title {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.order-success-meta {
+  text-align: center;
+  color: #c8daea;
+  font-size: 15px;
+  margin: 0 0 40px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* TWO-COLUMN LAYOUT */
+.order-success-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto 32px;
+}
+
+/* LEFT — ITEMS */
+.order-success-items-panel {
+  background-color: #4a6175;
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-success-item-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.order-success-item-image {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #1e2d3d;
+  flex-shrink: 0;
+}
+
+.order-success-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.order-success-item-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.order-success-item-detail {
+  font-size: 15px;
+  color: #c8daea;
+  margin: 0;
+}
+
+/* RIGHT — DETAILS */
+.order-success-details-panel {
+  background-color: #4a6175;
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-success-section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 10px;
+}
+
+.order-success-info-card {
+  background-color: #3d4f63;
+  border-radius: 10px;
+  padding: 14px 18px;
+  color: #c8daea;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.order-success-info-card p {
+  margin: 0;
+}
+
+.order-success-info-card strong {
+  color: #fff;
+}
+
+/* FOOTER */
+.order-success-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.order-success-btn {
+  padding: 20px 80px;
+  background-color: #3d4f63;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.order-success-btn:hover {
+  background-color: #2d3d4f;
+}

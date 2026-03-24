@@ -1,0 +1,153 @@
+.portal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.portal-modal {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 36px 40px;
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.portal-body {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.portal-product-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background-color: #1e2d3d;
+}
+
+.portal-product-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.portal-product-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e2d3d;
+  margin: 0;
+}
+
+.portal-product-price {
+  font-size: 16px;
+  color: #607b94;
+  margin: 0;
+}
+
+.portal-qty-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.portal-qty-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3d4f63;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.portal-qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.portal-qty-btn {
+  width: 32px;
+  height: 32px;
+  background-color: #dde9f5;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  color: #3d4f63;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.portal-qty-btn:hover {
+  background-color: #c5d8ee;
+}
+
+.portal-qty-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.portal-qty-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e2d3d;
+  min-width: 24px;
+  text-align: center;
+}
+
+.portal-error {
+  font-size: 13px;
+  color: #c0392b;
+  margin: 0;
+}
+
+.portal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.portal-btn {
+  flex: 1;
+  padding: 12px 0;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.portal-btn-filled {
+  background-color: #3d4f63;
+  color: #fff;
+  border: none;
+}
+
+.portal-btn-filled:hover:not(:disabled) {
+  background-color: #2d3d4f;
+}
+
+.portal-btn-filled:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.portal-btn-outline {
+  background-color: transparent;
+  color: #3d4f63;
+  border: 1.5px solid #3d4f63;
+}
+
+.portal-btn-outline:hover {
+  background-color: #f0f4f8;
+}
