@@ -4,7 +4,7 @@ import "./NavigationBar.css";
 import logo from "../assets/logo.svg";
 
 const NavigationBar = () => {
-  const { isAuthenticated, logout } = useAuth();
+  const { user, isAuthenticated, logout } = useAuth();
   const { pathname } = useLocation();
 
   if (pathname === "/login" || pathname === "/register") return null;
@@ -19,8 +19,18 @@ const NavigationBar = () => {
         {isAuthenticated ? (
           <>
             <NavLink to="/me" className="navbar-link">Profile</NavLink>
-            <NavLink to="/cart" className="navbar-link">Cart</NavLink>
-            <NavLink to="/orders" className="navbar-link">Orders</NavLink>
+            {user?.role === "admin" ? (
+              <>
+                <NavLink to="/admin/orders" className="navbar-link">Order List</NavLink>
+                <NavLink to="/admin/categories" className="navbar-link">Category List</NavLink>
+                <NavLink to="/admin/products" className="navbar-link">Product List</NavLink>
+              </>
+            ) : (
+              <>
+                <NavLink to="/cart" className="navbar-link">Cart</NavLink>
+                <NavLink to="/orders" className="navbar-link">Orders</NavLink>
+              </>
+            )}
             <button className="navbar-logout-btn" onClick={logout}>Logout</button>
           </>
         ) : (
