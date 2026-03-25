@@ -94,6 +94,9 @@ export const createOrder = (orderDetails) =>
 
 export const getMyOrders = () => apiFetch("/orders/myOrders");
 
+export const getAllOrders = (status) =>
+  apiFetch(`/orders${status ? `?status=${status}` : ""}`);
+
 export const getOneOrder = (id) => apiFetch(`/orders/${id}`);
 
 export const cancelOrder = (id) =>
