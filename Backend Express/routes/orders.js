@@ -2,6 +2,7 @@ import express from "express";
 import {
   cancelOrder,
   createOrderFromCart,
+  getAllOrders,
   getMyOrders,
   getOrderById,
   updateOrderStatus,
@@ -19,6 +20,7 @@ router.get("/myOrders", authenticateAccessToken, getMyOrders);
 router.delete("/:id/cancel", authenticateAccessToken, cancelOrder);
 
 // Admin Routes
+router.get("/", authenticateAccessToken, adminAuthorization, getAllOrders);
 router.put(
   "/:id/status",
   authenticateAccessToken,

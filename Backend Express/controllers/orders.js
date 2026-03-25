@@ -250,6 +250,33 @@ export const cancelOrder = async (req, res) => {
   }
 };
 
+export const getAllOrders = async (req, res) => {
+  try {
+    const page = Number(req.query.page) || 1;
+    const limit = Number(req.query.limit) || 20;
+    const { status } = req.query;
+
+    const filter = status ? { status } : {};
+
+    const orders = await Order.find(filter)
+      .populate("user", "name email")
+      .sort({ createdAt: -1 })
+      .limit(limit)
+      .skip((page - 1) * limit);
+
+    const total = await Order.countDocuments(filter);
+
+    res.json({
+      success: true,
+      orders,
+      pagination: { total, page, pages: Math.ceil(total / limit) },
+    });
+  } catch (error) {
+    console.error("Get all orders error:", error);
+    res.status(500).json({ success: false, msg: "Server error" });
+  }
+};
+
 export const updateOrderStatus = async (req, res) => {
   try {
     const { id } = req.params;

@@ -1,0 +1,344 @@
+.admin-page {
+  min-height: 100vh;
+  background-color: #6b89a5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 24px;
+}
+
+.admin-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 32px;
+  text-align: center;
+  font-family: Georgia, serif;
+}
+
+.admin-container {
+  background-color: #2c4460;
+  border-radius: 20px;
+  padding: 32px;
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Add button */
+.admin-add-btn {
+  align-self: center;
+  padding: 14px 40px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.admin-add-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+/* Cards */
+.admin-card {
+  background-color: #2c4460;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.admin-card-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+  background-color: #1e3347;
+}
+
+.admin-card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-card-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.admin-card-detail {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+.admin-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.admin-card-btn {
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+}
+
+.admin-card-btn-edit {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.admin-card-btn-edit:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.admin-card-btn-delete {
+  background-color: rgba(192, 57, 43, 0.7);
+  color: #fff;
+}
+
+.admin-card-btn-delete:hover {
+  background-color: rgba(192, 57, 43, 0.9);
+}
+
+.admin-card-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Order lookup */
+.admin-search-row {
+  display: flex;
+  gap: 12px;
+}
+
+.admin-input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+}
+
+.admin-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.admin-input:focus {
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.admin-search-btn {
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.admin-search-btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.admin-order-card {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-order-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.admin-order-detail {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+.admin-status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.admin-select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+}
+
+.admin-select option {
+  background-color: #2c4460;
+  color: #fff;
+}
+
+.admin-form-submit {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.admin-form-submit:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.admin-form-submit:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.admin-error {
+  font-size: 13px;
+  color: #e57373;
+  margin: 0;
+}
+
+.admin-muted {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin: 0;
+}
+
+/* Order filter tabs */
+.order-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.order-filter-btn {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+
+.order-filter-btn:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+
+.order-filter-btn-active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+  color: #fff;
+}
+
+/* Clickable order card */
+.order-card-clickable {
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.order-card-clickable:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.order-card-selected {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Inline update panel */
+.order-update-panel {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.order-update-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.order-update-actions .admin-form-submit {
+  flex: 1;
+}

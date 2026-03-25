@@ -1,100 +1,67 @@
 import { useState } from "react";
-import {
-  createCategory,
-  deleteCategory,
-  getAllCategories,
-} from "../src/api/crud";
+import { deleteCategory, getAllCategories } from "../src/api/crud";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import AddCategoryPortal from "./AddCategoryPortal";
+import "./admin.css";
 
 const CategoryList = () => {
   const queryClient = useQueryClient();
-  const [categoryData, setCategoryData] = useState({ name: "", parent: "" });
+  const [addingCategory, setAddingCategory] = useState(false);
 
   const {
     data: allCategories,
-    isLoading: allCategoriesLoading,
-    isError: allCategoriesError,
+    isLoading,
+    isError,
   } = useQuery({
     queryKey: ["allCategories"],
     queryFn: getAllCategories,
   });
 
-  const {
-    mutate: addCategory,
-    isPending: createCategoryPending,
-    isError: createCategoryError,
-  } = useMutation({
-    mutationFn: (data) => createCategory(data),
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["allCategories"] });
-      setCategoryData({ name: "", parent: "" });
-    },
-  });
-
-  const {
-    mutate: deletingCategory,
-    isPending: deletingCategoryPending,
-    isError: deletingCategoryError,
-  } = useMutation({
-    mutationFn: (categoryId) => deleteCategory(categoryId),
+  const { mutate: deletingCategory, isPending: deletePending } = useMutation({
+    mutationFn: (id) => deleteCategory(id),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["allCategories"] });
     },
   });
 
-  if (allCategoriesLoading) return <div>Loading...</div>;
-  if (allCategoriesError) return <div>Error loading categories</div>;
+  if (isLoading) return <div className="admin-page"><p className="admin-muted">Loading...</p></div>;
+  if (isError) return <div className="admin-page"><p className="admin-error">Error loading categories.</p></div>;
 
   return (
-    <div>
-      <h1>Category List</h1>
-      <label>Add new category</label>
-      <input
-        type="text"
-        placeholder="Category name"
-        value={categoryData.name}
-        onChange={(e) =>
-          setCategoryData({ ...categoryData, name: e.target.value })
-        }
-      />
-      <select
-        name="parent"
-        value={categoryData.parent}
-        onChange={(e) =>
-          setCategoryData({ ...categoryData, parent: e.target.value })
-        }
-      >
-        <option value="">Select Parent Category</option>
-        {allCategories.map((category) => (
-          <option key={category._id} value={category._id}>
-            {category.path ?? category.name}
-          </option>
-        ))}
-      </select>
+    <div className="admin-page">
+      <h1 className="admin-title">Category List</h1>
+      <div className="admin-container">
+        <button className="admin-add-btn" onClick={() => setAddingCategory(true)}>
+          Add New Category
+        </button>
 
-      {createCategoryError && <p>Error creating category</p>}
-      {deletingCategoryError && <p>Error deleting category</p>}
-
-      <button
-        onClick={() => addCategory(categoryData)}
-        disabled={!categoryData.name || createCategoryPending}
-      >
-        {createCategoryPending ? "Adding..." : "Add Category"}
-      </button>
-      <div>
         {allCategories.map((category) => (
-          <div key={category._id}>
-            <h4>{category.name}</h4>
-            <p>Pathway: {category.path}</p>
-            <button
-              onClick={() => deletingCategory(category._id)}
-              disabled={deletingCategoryPending}
-            >
-              Delete
-            </button>
+          <div className="admin-card" key={category._id}>
+            <div className="admin-card-info">
+              <p className="admin-card-name">{category.name}</p>
+              {category.path && (
+                <p className="admin-card-detail">Path: {category.path}</p>
+              )}
+            </div>
+            <div className="admin-card-actions">
+              <button
+                className="admin-card-btn admin-card-btn-delete"
+                onClick={() => deletingCategory(category._id)}
+                disabled={deletePending}
+              >
+                Delete
+              </button>
+            </div>
           </div>
         ))}
       </div>
+
+      {addingCategory && (
+        <AddCategoryPortal
+          categories={allCategories}
+          onClose={() => setAddingCategory(false)}
+        />
+      )}
     </div>
   );
 };

@@ -51,7 +51,7 @@ const Orders = () => {
                   <div className="order-card-info">
                     <p>Order #: {order.orderNumber}</p>
                     <p>Date: {new Date(order.createdAt).toLocaleDateString()}</p>
-                    <p>Status: {order.status}</p>
+                    <p>Status: <span className={`order-status-badge order-status-${order.status}`}>{order.status}</span></p>
                     <p>Payment: {order.paymentStatus}</p>
                     <div className="order-card-items">
                       {order.items.map((item) => (
