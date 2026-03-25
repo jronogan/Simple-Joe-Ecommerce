@@ -1,0 +1,122 @@
+.edit-portal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.edit-portal-modal {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 36px 40px;
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edit-portal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e2d3d;
+  margin: 0;
+}
+
+.edit-portal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.edit-portal-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #3d4f63;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.edit-portal-input {
+  padding: 10px 12px;
+  border: 1.5px solid #dde9f5;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #1e2d3d;
+  background-color: #f8fbff;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.edit-portal-input:focus {
+  border-color: #3d4f63;
+}
+
+.edit-portal-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.edit-portal-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.edit-portal-error {
+  font-size: 13px;
+  color: #c0392b;
+  margin: 0;
+}
+
+.edit-portal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.edit-portal-btn {
+  flex: 1;
+  padding: 12px 0;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.edit-portal-btn-filled {
+  background-color: #3d4f63;
+  color: #fff;
+  border: none;
+}
+
+.edit-portal-btn-filled:hover:not(:disabled) {
+  background-color: #2d3d4f;
+}
+
+.edit-portal-btn-filled:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.edit-portal-btn-outline {
+  background-color: transparent;
+  color: #3d4f63;
+  border: 1.5px solid #3d4f63;
+}
+
+.edit-portal-btn-outline:hover {
+  background-color: #f0f4f8;
+}
